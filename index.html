@@ -19,45 +19,115 @@
 
 		<title>Sunnyside agency landing page</title>
 
-		<style></style>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+			@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+			:root {
+				/* Primary */
+				--Soft-red: hsl(7, 99%, 70%);
+				--Yellow: hsl(51, 100%, 49%);
+				--Dark-desaturated-cyan: hsl(167, 40%, 24%);
+				--Dark-blue: hsl(198, 62%, 26%);
+				--Dark-moderate-cyan: hsl(168, 34%, 41%);
+				/* Neutral */
+				--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+				--Very-dark-grayish-blue: hsl(213, 9%, 39%);
+				--Dark-grayish-blue: hsl(232, 10%, 55%);
+				--Grayish-blue: hsl(210, 4%, 67%);
+				--White: hsl(0, 0%, 100%);
+			}
+			body {
+				font-size: 18px;
+			}
+			.fraunces {
+				font-family: "Fraunces", serif;
+			}
+			.barlow {
+				font-family: "Barlow", sans-serif;
+			}
+			.dark-grayish-blue {
+				color: var(--Dark-grayish-blue);
+			}
+			.header-img {
+				background-image: url("./images/mobile/image-header.jpg");
+				background-color: #cccccc;
+				height: 530px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+			.height {
+				height: 0.1px;
+			}
+			#triangle-bottomright {
+				width: 0;
+				height: 0;
+				border-bottom: 25px solid white;
+				border-left: 25px solid transparent;
+			}
+			.bottom {
+				bottom: 305px;
+			}
+			.bg-yellow {
+				background-color: var(--Yellow);
+			}
+		</style>
 	</head>
 	<body>
-		<!-- humburger menu -->
-		<div v-scope class="">
-			<div class="relative mx-auto sm:max-w-xl">
-				<nav>
-					<button
-						class="relative w-10 h-10 text-gray-500 bg-white focus:outline-none"
-						@click="open = !open"
-					>
-						<span class="sr-only">Open main menu</span>
-						<div
-							class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2  left-1/2 top-1/2"
+		<!-- Hero -->
+		<div v-scope class="justify-around header-img">
+			<!-- logo and menu -->
+			<div class="flex items-center justify-between pt-5 pb-10 mx-5">
+				<!-- header-img -->
+				<object data="./images/logo.svg"></object>
+				<!-- humburger menu -->
+				<div class="relative sm:max-w-xl bg-none">
+					<nav>
+						<button
+							class="relative w-3 h-10 text-white bg-transparent focus:outline-none"
+							@click="open = !open"
 						>
-							<span
-								aria-hidden="true"
-								class="block absolute h-0.5 w-5 bg-current transform transition"
-								:class="{'rotate-45': open,' -translate-y-1.5': !open }"
-							></span>
-							<span
-								aria-hidden="true"
-								class="block absolute h-0.5 w-5 bg-current transform transition"
-								:class="{'opacity-0': open } "
-							></span>
-							<span
-								aria-hidden="true"
-								class="block absolute h-0.5 w-5 bg-current transform transition"
-								:class="{'-rotate-45': open, ' translate-y-1.5': !open}"
-							></span>
-						</div>
-					</button>
-				</nav>
+							<span class="sr-only">Open main menu</span>
+							<div
+								class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+							>
+								<span
+									aria-hidden="true"
+									class="absolute block w-5 transition transform bg-current height"
+									:class="{'rotate-45': open,' -translate-y-1.5': !open }"
+								></span>
+								<span
+									aria-hidden="true"
+									class="absolute block w-5 transition transform bg-current height"
+									:class="{'opacity-0': open } "
+								></span>
+								<span
+									aria-hidden="true"
+									class="absolute block w-5 transition transform bg-current height"
+									:class="{'-rotate-45': open, ' translate-y-1.5': !open}"
+								></span>
+							</div>
+						</button>
+					</nav>
+				</div>
 			</div>
-			<div v-if="open" class="flex flex-col items-center mx-5 bg-red-200">
-				<h1>About</h1>
-				<h1>Services</h1>
-				<h1>Projects</h1>
-				<h1>Contact</h1>
+			<!-- menu -->
+			<div
+				v-if="open"
+				class="relative flex flex-col items-center py-10 mx-5 bg-white"
+			>
+				<div
+					id="triangle-bottomright"
+					class="absolute right-0 bottom barlow"
+				></div>
+				<div v-for="tab in tabs" :key="tab">
+					<h1 class="mb-8 font-semibold dark-grayish-blue">{{ tab }}</h1>
+				</div>
+				<button class="px-8 py-3 font-black rounded-full bg-yellow fraunces">
+					Contact
+				</button>
 			</div>
 		</div>
 
@@ -106,7 +176,7 @@
 			import { createApp } from "https://unpkg.com/petite-vue?module";
 			createApp({
 				open: false,
-				show: true,
+				tabs: ["About", "Services", "Projects"],
 			}).mount();
 		</script>
 	</body>
