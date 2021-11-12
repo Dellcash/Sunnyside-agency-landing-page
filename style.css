@@ -43,14 +43,20 @@ body {
 .bg-yellow {
   background-color: var(--Yellow);
 }
-.Dark-desaturated-cyan{
-  color: var(--Dark-desaturated-cyan);
+.bg-Dark-moderate-cyan {
+  background-color: var(--Dark-moderate-cyan);
 }
 .Dark-blue{
   color: var(--Dark-blue);
 }
 .Grayish-blue{
   color: var(--Grayish-blue);
+}
+.Dark-desaturated-cyan{
+  color: var(--Dark-desaturated-cyan);
+}
+.Dark-moderate-cyan{
+  color: var(--Dark-moderate-cyan);
 }
 /* layout */
 .header-img {
@@ -104,4 +110,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.filter-green{
+  filter: invert(23%) sepia(46%) saturate(2476%) hue-rotate(93deg) brightness(33%) contrast(56%);
+  margin: auto
 }
