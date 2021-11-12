@@ -43,10 +43,15 @@ body {
 .bg-yellow {
   background-color: var(--Yellow);
 }
+.Dark-desaturated-cyan{
+  color: var(--Dark-desaturated-cyan);
+}
+.Dark-blue{
+  color: var(--Dark-blue);
+}
 /* layout */
 .header-img {
   background-image: url("./images/mobile/image-header.jpg");
-  background-color: #cccccc;
   height: 530px;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,4 +85,20 @@ body {
 }
 .transform-title {
   font-size: 2rem;
+}
+/* forth section */
+.forth-section {
+  background-image: url("./images/mobile/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* fifth section */
+.fifth-section {
+  background-image: url("./images/mobile/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }

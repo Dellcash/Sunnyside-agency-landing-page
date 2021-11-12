@@ -21,115 +21,147 @@
 		<title>Sunnyside agency landing page</title>
 	</head>
 	<body>
-		<!-- Hero -->
-		<div v-cloak v-scope class="justify-around header-img">
-			<!-- logo and menu -->
-			<div class="flex items-center justify-between pt-5 pb-10 mx-5">
-				<!-- header-img -->
-				<object data="./images/logo.svg"></object>
-				<!-- humburger menu -->
-				<div class="relative sm:max-w-xl bg-none">
-					<nav>
-						<button
-							class="relative w-3 h-10 text-white bg-transparent focus:outline-none"
-							@click="open = !open"
-						>
-							<span class="sr-only">Open main menu</span>
-							<div
-								class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+		<div>
+			<!-- Hero -->
+			<div v-scope class="justify-around header-img">
+				<!-- logo and menu -->
+				<div class="flex items-center justify-between pt-5 pb-10 mx-5">
+					<!-- header-img -->
+					<object data="./images/logo.svg"></object>
+					<!-- humburger menu -->
+					<div class="relative sm:max-w-xl bg-none">
+						<nav>
+							<button
+								class="relative w-3 h-10 text-white bg-transparent focus:outline-none"
+								@click="open = !open"
 							>
-								<span
-									aria-hidden="true"
-									class="absolute block w-5 transition transform bg-current height"
-									:class="{'rotate-45': open,' -translate-y-1.5': !open }"
-								></span>
-								<span
-									aria-hidden="true"
-									class="absolute block w-5 transition transform bg-current height"
-									:class="{'opacity-0': open } "
-								></span>
-								<span
-									aria-hidden="true"
-									class="absolute block w-5 transition transform bg-current height"
-									:class="{'-rotate-45': open, ' translate-y-1.5': !open}"
-								></span>
-							</div>
-						</button>
-					</nav>
+								<span class="sr-only">Open main menu</span>
+								<div
+									class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+								>
+									<span
+										aria-hidden="true"
+										class="absolute block w-5 transition transform bg-current height"
+										:class="{'rotate-45': open,' -translate-y-1.5': !open }"
+									></span>
+									<span
+										aria-hidden="true"
+										class="absolute block w-5 transition transform bg-current height"
+										:class="{'opacity-0': open } "
+									></span>
+									<span
+										aria-hidden="true"
+										class="absolute block w-5 transition transform bg-current height"
+										:class="{'-rotate-45': open, ' translate-y-1.5': !open}"
+									></span>
+								</div>
+							</button>
+						</nav>
+					</div>
 				</div>
-			</div>
-			<!-- menu -->
-			<div
-				v-if="open"
-				class="relative flex flex-col items-center py-10 mx-5 bg-white index"
-			>
+				<!-- menu -->
 				<div
-					id="triangle-bottomright"
-					class="absolute right-0 bottom barlow"
-				></div>
-				<div v-for="tab in tabs" :key="tab">
-					<h1 class="mb-8 text-xl font-semibold dark-grayish-blue">
-						{{ tab }}
-					</h1>
-				</div>
-				<button
-					class="px-8 py-4 text-sm font-black uppercase rounded-full bg-yellow fraunces"
+					v-if="open"
+					class="relative flex flex-col items-center py-10 mx-5 bg-white index"
 				>
-					Contact
+					<div
+						id="triangle-bottomright"
+						class="absolute right-0 bottom barlow"
+					></div>
+					<div v-for="tab in tabs" :key="tab">
+						<h1 class="mb-8 text-xl font-semibold dark-grayish-blue">
+							{{ tab }}
+						</h1>
+					</div>
+					<button
+						class="px-8 py-4 text-sm font-black uppercase rounded-full bg-yellow fraunces"
+					>
+						Contact
+					</button>
+				</div>
+				<h1 class="mt-10 text-4xl text-center text-white uppercase we fraunces">
+					We are creatives
+				</h1>
+				<object
+					class="m-auto mt-16"
+					data="./images/icon-arrow-down.svg"
+					type=""
+				></object>
+			</div>
+			<!-- second section -->
+			<div class="text-center bg-Grayish-blue">
+				<img src="./images/mobile/image-transform.jpg" alt="" />
+				<h1
+					class="px-8 font-black leading-9 fraunces mt-14 Very-dark-desaturated-blue transform-title"
+				>
+					Transform your brand
+				</h1>
+				<p
+					class="px-6 my-6 font-semibold leading-7 tracking-tighter dark-grayish-blue"
+				>
+					We are a full-service creative agency specializing in helping brands
+					grow fast. Engage your clients through compelling visuals that do most
+					of the marketing for you.
+				</p>
+				<button
+					class="relative text-sm font-black tracking-wide uppercase border-b-8 border-yellow-200 fraunces mb-14"
+					style="line-height: 5px"
+				>
+					Learn more
 				</button>
 			</div>
-			<h1 class="mt-10 text-4xl text-center text-white uppercase we fraunces">
-				We are creatives
-			</h1>
-			<object
-				class="m-auto mt-16"
-				data="./images/icon-arrow-down.svg"
-				type=""
-			></object>
-		</div>
-		<!-- second section -->
-		<div class="text-center bg-Grayish-blue">
-			<img src="./images/mobile/image-transform.jpg" alt="" />
-			<h1
-				class="px-8 font-black leading-9 fraunces mt-14 Very-dark-desaturated-blue transform-title"
-			>
-				Transform your brand
-			</h1>
-			<p
-				class="px-6 my-6 font-semibold leading-7 tracking-tighter dark-grayish-blue"
-			>
-				We are a full-service creative agency specializing in helping brands
-				grow fast. Engage your clients through compelling visuals that do most
-				of the marketing for you.
-			</p>
-			<button
-				class="relative text-sm font-black tracking-wide uppercase border-b-8 border-yellow-200 fraunces mb-14"
-				style="line-height: 5px"
-			>
-				Learn more
-			</button>
-		</div>
-		<!-- third section -->
-		<div class="text-center bg-Grayish-blue">
-			<img src="./images/mobile/image-stand-out.jpg" alt="" />
-			<h1
-				class="px-8 font-black leading-9 fraunces mt-14 Very-dark-desaturated-blue transform-title"
-			>
-				Stand out to the right audience
-			</h1>
-			<p
-				class="px-8 my-6 font-semibold leading-7 tracking-tighter dark-grayish-blue"
-			>
-				Using a collaborative formula of designers, researchers, photographers,
-				videographers, and copywriters, we’ll build and extend your brand in
-				digital places.
-			</p>
-			<button
-				class="relative text-sm font-black tracking-wide uppercase border-b-8 border-red-200 fraunces mb-14"
-				style="line-height: 5px"
-			>
-				Learn more
-			</button>
+			<!-- third section -->
+			<div class="text-center bg-Grayish-blue">
+				<img src="./images/mobile/image-stand-out.jpg" alt="" />
+				<h1
+					class="px-8 font-black leading-9 fraunces mt-14 Very-dark-desaturated-blue transform-title"
+				>
+					Stand out to the right audience
+				</h1>
+				<p
+					class="px-8 my-6 font-semibold leading-7 tracking-tighter dark-grayish-blue"
+				>
+					Using a collaborative formula of designers, researchers,
+					photographers, videographers, and copywriters, we’ll build and extend
+					your brand in digital places.
+				</p>
+				<button
+					class="relative text-sm font-black tracking-wide uppercase border-b-8 border-red-200 fraunces mb-14"
+					style="line-height: 5px"
+				>
+					Learn more
+				</button>
+			</div>
+			<!-- forth section -->
+			<div class="forth-section">
+				<div
+					class="text-center Dark-desaturated-cyan"
+					style="padding-top: 25rem; padding-bottom: 4rem"
+				>
+					<h1 class="mb-6 font-black fraunces" style="font-size: 25px">
+						Graphic Design
+					</h1>
+					<p class="px-6 text-sm font-bold">
+						Great design makes you memorable. We deliver artwork that
+						underscores your brand message and captures potential clients’
+						attention.
+					</p>
+				</div>
+			</div>
+			<!-- fifth section -->
+			<div class="fifth-section">
+				<div
+					class="text-center Dark-blue"
+					style="padding-top: 25rem; padding-bottom: 4rem"
+				>
+					<h1 class="mb-6 font-black fraunces" style="font-size: 25px">
+						Photography
+					</h1>
+					<p class="px-6 text-sm font-bold">
+						Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+					</p>
+				</div>
+			</div>
 		</div>
 
 		<!-- 
@@ -143,13 +175,12 @@
 
   
 
-  Learn more
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+
+
+  
+  
 
   Client testimonials
 
