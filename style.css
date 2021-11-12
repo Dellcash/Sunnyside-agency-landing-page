@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  /* Primary */
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --Dark-blue: hsl(198, 62%, 26%);
+  --Dark-moderate-cyan: hsl(168, 34%, 41%);
+  /* Neutral */
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  font-size: 18px;
+}
+/* remove flash page */
+[v-cloak] {
+  display: none;
+}
+/* font famileis */
+.fraunces {
+  font-family: "Fraunces", serif;
+}
+.barlow {
+  font-family: "Barlow", sans-serif;
+}
+/* neutral colors */
+.dark-grayish-blue {
+  color: var(--Dark-grayish-blue);
+}
+.Very-dark-grayish-blue {
+  color: var(--Very-dark-grayish-blue);
+}
+.Very-dark-desaturated-blue {
+  color: var(--Very-dark-desaturated-blue);
+}
+/* primary colors */
+.bg-yellow {
+  background-color: var(--Yellow);
+}
+/* layout */
+.header-img {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-color: #cccccc;
+  height: 530px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* humburger menu */
+.height {
+  height: 0.1px;
+}
+/* shape of menu box */
+#triangle-bottomright {
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid white;
+  border-left: 25px solid transparent;
+}
+/* shape of menu box */
+.bottom {
+  bottom: 307px;
+}
+/* title */
+.we {
+  letter-spacing: 10px;
+}
+/* menu */
+.index {
+  position: absolute;
+  z-index: 1;
+  width: 21rem;
+}
+.transform-title {
+  font-size: 2rem;
+}

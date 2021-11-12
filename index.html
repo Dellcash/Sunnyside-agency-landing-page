@@ -16,81 +16,10 @@
 			rel="stylesheet"
 			type="text/css"
 		/>
+		<link rel="stylesheet" href="./style.css">
 
 		<title>Sunnyside agency landing page</title>
 
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
-			@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
-
-			:root {
-				/* Primary */
-				--Soft-red: hsl(7, 99%, 70%);
-				--Yellow: hsl(51, 100%, 49%);
-				--Dark-desaturated-cyan: hsl(167, 40%, 24%);
-				--Dark-blue: hsl(198, 62%, 26%);
-				--Dark-moderate-cyan: hsl(168, 34%, 41%);
-				/* Neutral */
-				--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
-				--Very-dark-grayish-blue: hsl(213, 9%, 39%);
-				--Dark-grayish-blue: hsl(232, 10%, 55%);
-				--Grayish-blue: hsl(210, 4%, 67%);
-				--White: hsl(0, 0%, 100%);
-			}
-			body {
-				font-size: 18px;
-			}
-			/* remove flash page */
-			[v-cloak] {
-				display: none;
-			}
-			.fraunces {
-				font-family: "Fraunces", serif;
-			}
-			.barlow {
-				font-family: "Barlow", sans-serif;
-			}
-			.dark-grayish-blue {
-				color: var(--Dark-grayish-blue);
-			}
-			.bg-yellow {
-				background-color: var(--Yellow);
-			}
-			.header-img {
-				background-image: url("./images/mobile/image-header.jpg");
-				background-color: #cccccc;
-				height: 530px;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				position: relative;
-			}
-			/* humburger menu */
-			.height {
-				height: 0.1px;
-			}
-			/* shape of menu box */
-			#triangle-bottomright {
-				width: 0;
-				height: 0;
-				border-bottom: 25px solid white;
-				border-left: 25px solid transparent;
-			}
-			/* shape of menu box */
-			.bottom {
-				bottom: 305px;
-			}
-			/* title */
-			.we {
-				letter-spacing: 10px;
-			}
-			/* menu */
-			.index {
-				position: absolute;
-				z-index: 1;
-				width: 21rem;
-			}
-		</style>
 	</head>
 	<body>
 		<!-- Hero -->
@@ -103,65 +32,26 @@
 				<div class="relative sm:max-w-xl bg-none">
 					<nav>
 						<button
-							class="
-								relative
-								w-3
-								h-10
-								text-white
-								bg-transparent
-								focus:outline-none
-							"
+							class="relative w-3 h-10 text-white bg-transparent focus:outline-none"
 							@click="open = !open"
 						>
 							<span class="sr-only">Open main menu</span>
 							<div
-								class="
-									absolute
-									block
-									w-5
-									transform
-									-translate-x-1/2 -translate-y-1/2
-									left-1/2
-									top-1/2
-								"
+								class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
 							>
 								<span
 									aria-hidden="true"
-									class="
-										absolute
-										block
-										w-5
-										transition
-										transform
-										bg-current
-										height
-									"
+									class="absolute block w-5 transition transform bg-current height"
 									:class="{'rotate-45': open,' -translate-y-1.5': !open }"
 								></span>
 								<span
 									aria-hidden="true"
-									class="
-										absolute
-										block
-										w-5
-										transition
-										transform
-										bg-current
-										height
-									"
+									class="absolute block w-5 transition transform bg-current height"
 									:class="{'opacity-0': open } "
 								></span>
 								<span
 									aria-hidden="true"
-									class="
-										absolute
-										block
-										w-5
-										transition
-										transform
-										bg-current
-										height
-									"
+									class="absolute block w-5 transition transform bg-current height"
 									:class="{'-rotate-45': open, ' translate-y-1.5': !open}"
 								></span>
 							</div>
@@ -181,24 +71,44 @@
 				<div v-for="tab in tabs" :key="tab">
 					<h1 class="mb-8 font-semibold dark-grayish-blue">{{ tab }}</h1>
 				</div>
-				<button class="px-8 py-3 font-black rounded-full bg-yellow fraunces">
+				<button class="px-8 py-4 text-sm font-black uppercase rounded-full bg-yellow fraunces">
 					Contact
 				</button>
 			</div>
 			<h1 class="mt-10 text-4xl text-center text-white uppercase we fraunces">
 				We are creatives
 			</h1>
-			<object class="m-auto mt-16" data="./images/icon-arrow-down.svg" type=""></object>
+			<object
+				class="m-auto mt-16"
+				data="./images/icon-arrow-down.svg"
+				type=""
+			></object>
+		</div>
+		<!-- second section -->
+		<div class="text-center bg-Grayish-blue">
+			<img src="./images/mobile/image-transform.jpg" alt="" />
+			<h1
+				class="px-8 font-black leading-9 fraunces mt-14 Very-dark-desaturated-blue transform-title"
+			>
+				Transform your brand
+			</h1>
+			<p
+				class="px-6 my-6 font-semibold leading-7 tracking-tighter dark-grayish-blue"
+			>
+				We are a full-service creative agency specializing in helping brands
+				grow fast. Engage your clients through compelling visuals that do most
+				of the marketing for you.
+			</p>
+				<button class="relative text-sm font-black tracking-wide uppercase border-b-8 border-yellow-200 fraunces mb-14" style="line-height: 5px;">Learn more</button>
+			</div>
 		</div>
 
-		<!-- We are creatives
+		<!-- 
 
-  Transform your brand
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
+ 
 
-  Learn more
+ 
 
   Stand out to the right audience
 
