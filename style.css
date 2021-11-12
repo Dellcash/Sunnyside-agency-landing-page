@@ -49,6 +49,9 @@ body {
 .Dark-blue{
   color: var(--Dark-blue);
 }
+.Grayish-blue{
+  color: var(--Grayish-blue);
+}
 /* layout */
 .header-img {
   background-image: url("./images/mobile/image-header.jpg");
