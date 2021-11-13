@@ -59,9 +59,17 @@ body {
   color: var(--Dark-moderate-cyan);
 }
 /* layout */
-.header-img {
+.mobile-header {
   background-image: url("./images/mobile/image-header.jpg");
   height: 530px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.desktop-header {
+  background-image: url("./images/desktop/image-header.jpg");
+  height: 730px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

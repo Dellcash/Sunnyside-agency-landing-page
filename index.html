@@ -29,11 +29,11 @@
 	</head>
 	<body>
 		<div>
-			<!-- Hero -->
-			<div v-scope class="justify-around header-img">
+			<!-- mobile header -->
+			<div v-scope class="justify-around mobile-header lg:hidden">
 				<!-- logo and menu -->
 				<div class="flex items-center justify-between pt-5 pb-10 mx-5">
-					<!-- header-img -->
+					<!-- header-logo -->
 					<object data="./images/logo.svg"></object>
 					<!-- humburger menu -->
 					<div class="relative sm:max-w-xl bg-none">
@@ -91,6 +91,38 @@
 				</h1>
 				<object
 					class="m-auto mt-16"
+					data="./images/icon-arrow-down.svg"
+					type=""
+				></object>
+			</div>
+			<!-- desktop header -->
+			<div class="flex justify-around hidden desktop-header lg:block">
+				<!-- logo and menu -->
+				<div class="flex items-center justify-between pt-5 mx-10">
+					<!-- header-logo -->
+					<object data="./images/logo.svg"></object>
+					<!-- menu -->
+					<div
+						class="flex items-center"
+					>
+						<div v-cloak v-scope v-for="tab in tabs" :key="tab">
+							<h1 class="mr-10 text-xl text-white">
+								{{ tab }}
+							</h1>
+						</div>
+						<button
+							class="px-8 py-4 text-sm text-white uppercase bg-gray-300 bg-opacity-50 rounded-full fraunces"
+						>
+							Contact
+						</button>
+					</div>
+				</div>
+
+				<h1 class="text-5xl text-center text-white uppercase mt-28 we fraunces">
+					We are creatives
+				</h1>
+				<object
+					class="m-auto mt-24"
 					data="./images/icon-arrow-down.svg"
 					type=""
 				></object>
