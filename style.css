@@ -111,6 +111,13 @@ body {
   background-size: cover;
   position: relative;
 }
+.forth-section-desktop {
+  background-image: url("./images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 /* fifth section */
 .fifth-section {
   background-image: url("./images/mobile/image-photography.jpg");
@@ -118,6 +125,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.fifth-section-desktop {
+  background-image: url("./images/desktop/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.client{
+  letter-spacing: 6px;
 }
 .filter-green{
   filter: invert(23%) sepia(46%) saturate(2476%) hue-rotate(93deg) brightness(33%) contrast(56%);
